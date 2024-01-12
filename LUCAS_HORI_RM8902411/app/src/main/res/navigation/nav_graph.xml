@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="br.com.fiap.lucas_hori_rm89024.fragmentos.HomeFragment"
+        android:label="@string/fragment_home"
+        android:layout="@layout/fragment_login">
+
+        <action
+            android:id="@+id/action_homeFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_cadastroFragment"
+            app:destination="@id/cadastroFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="br.com.fiap.lucas_hori_rm89024.fragmentos.LoginFragment"
+        android:label="@string/fragment_login"
+        android:layout="@layout/fragment_login">
+
+
+        <action
+            android:id="@+id/action_loginFragment_to_agendarFragment"
+            app:destination="@id/agendarFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/cadastroFragment"
+        android:name="br.com.fiap.lucas_hori_rm89024.fragmentos.CadastroFragment"
+        android:label="@string/fragment_cadastro"
+        android:layout="@layout/fragment_cadastro">
+
+        <action
+            android:id="@+id/action_cadastroFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/agendarFragment"
+        android:name="br.com.fiap.lucas_hori_rm89024.fragmentos.AgendamentoFragment"
+        android:label="@string/fragment_agendar"
+        android:layout="@layout/fragment_agendar">
+
+        <action
+            android:id="@+id/action_agendarFragment_to_medicosFragment"
+            app:destination="@id/medicosFragment" />
+
+        <action
+            android:id="@+id/action_agendarFragment_to_consultasFragment"
+            app:destination="@id/consultasFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/medicosFragment"
+        android:name="br.com.fiap.lucas_hori_rm89024.fragmentos.MedicosFragment"
+        android:label="@string/fragment_medicos"
+        android:layout="@layout/fragment_medicos">
+
+        <action
+            android:id="@+id/action_medicosFragment_to_agendarFragment"
+            app:destination="@id/agendarFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/consultasFragment"
+        android:name="br.com.fiap.lucas_hori_rm89024.fragmentos.ConsultasFragment"
+        android:label="@string/fragment_consultas"
+        android:layout="@layout/fragment_consultas">
+    </fragment>
+</navigation>
